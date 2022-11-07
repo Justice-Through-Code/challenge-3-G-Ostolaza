@@ -8,6 +8,11 @@ def stock_purchases():
         'google' : 1400,
         'msft' : 200
     }
+    # amazon = 3000
+    # apple = 100
+    # fb = 250
+    # google = 1400
+    # msft = 200
 
     # Given the prices above and a client's investment budget, how much stock can they buy?
     # 1.1 TODO: Ask the client's name (use the string: "What is your name? ") and save it into a variable
@@ -31,32 +36,30 @@ def stock_purchases():
     if stock_name != 'Amazon' and stock_name != 'Apple' and stock_name != 'Fb' and stock_name != 'Google' and stock_name != 'Msft':
         print('You have choose an invalid stock, please choose a valid stock from the selection')
     elif stock_name == 'Amazon':
-        stock_buy_limit = math.trunc(client_investment_amt/stock_dictionary['amazon'])
-        investment_shares = (f"{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${stock_dictionary['amazon']}.")
+        stock_buy_limit = math.trunc(client_investment_amt/amazon)
+        investment_shares = (f'{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${amazon}.')
         print (investment_shares)
 
     elif stock_name == 'Apple':
-        stock_buy_limit = math.trunc(client_investment_amt/stock_dictionary['apple'])
-        investment_shares = (f"{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${stock_dictionary['apple']}.")
+        stock_buy_limit = math.trunc(client_investment_amt/apple)
+        investment_shares = (f'{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${apple}.')
         print (investment_shares)
 
     elif stock_name == 'Fb':
-        stock_buy_limit = math.trunc(client_investment_amt/stock_dictionary['fb'])
-        investment_shares = (f"{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${stock_dictionary['fb']}.")
+        stock_buy_limit = math.trunc(client_investment_amt/fb)
+        investment_shares = (f'{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${fb}.')
         print (investment_shares)
 
     elif stock_name == 'Google':
-        stock_buy_limit = math.trunc(client_investment_amt/stock_dictionary['google'])
-        investment_shares = (f"{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${stock_dictionary['google']}.")
+        stock_buy_limit = math.trunc(client_investment_amt/google)
+        investment_shares = (f'{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${google}.')
         print (investment_shares)
 
     elif stock_name == 'Msft':
-        stock_buy_limit = math.trunc(client_investment_amt/stock_dictionary['msft'])
-        investment_shares = (f"{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${stock_dictionary['msft']}.")
+        stock_buy_limit = math.trunc(client_investment_amt/msft)
+        investment_shares = (f'{client_name} has ${client_investment_amt} to invest and can buy {stock_buy_limit} shares of {stock_name} at the current price of ${msft}.')
         print (investment_shares)
 
     # 1.5 TODO: Once you've calculated the number of stocks that can be purchased,
     # Use an f-string to print the result for the client, ala:
     # Alex has $5000 to invest and can buy 50 shares of Apple at the current price of $100.
-
-stock_purchases()
